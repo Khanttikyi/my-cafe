@@ -1,14 +1,15 @@
 <div class="grid">
-    <div class="row justify-center mt-5">
-        <div class="col-6 text-center">
-            <h5 class="font-bold">About Us</h5>
+    <div class="row mt-5">
+        <div class="col-6">
+            <h2 class="font-bold cyber-h">About Us</h2>
             <h3 class="mt-2
         font-natual-black" style="line-height: 25px;">
                 Why we are the best
             </h3>
         </div>
         <div class="mt-5">
-            <p-splitter [panelSizes]="[65, 35]" [gutterSize]="0" [style]="{ height: '400px' }" styleClass="mb-5">
+            <p-splitter [panelSizes]="[65, 35]" [gutterSize]="0"
+                [style]="{ height: '400px',background:'transparent' }" styleClass="mb-5">
                 <ng-template pTemplate>
                     <div class="row">
                         <div class="col flex align-items-center justify-content-center">
@@ -41,9 +42,12 @@
                                 So why not stop by and join us for a cup of coffee? Whether you're a seasoned coffee
                                 enthusiast or a casual caffeine lover, we can't wait to welcome you to the <b>Blue
                                     Corner
-                                    family.</b>"<br><button
-                                    class="bg-coffee-brown border-btm-right border-coffee more-btn">Read
-                                    More</button>
+                                    family.</b>"<br>
+                                <button class="cyber-button-small bg-orange fg-white">
+                                    READ MORE
+                                    <span class="glitchtext">READ MORE</span>
+                                    <span class="tag">R25</span>
+                                </button>
                             </p>
                         </div>
                     </div>
@@ -53,8 +57,12 @@
                     <div class="col flex align-items-center justify-content-center">
 
                         <div class="image-row">
-                            <div class="image-container" *ngFor="let data of image.slice(0, 2); let i = index"
+                            <!-- <div class="image-container" *ngFor="let data of image.slice(0, 2); let i = index"
                                 [ngClass]="{'image-container-odd': i % 2 !== 0}">
+                                <img [src]="'../../../assets/images/' + data + '.jpg'" alt="Image Description">
+                            </div> -->
+                            <div class="cyber-tile-small fg-dark bg-orange mt-4 inline-block vt-bot"
+                                style="margin: 5px;" *ngFor="let data of image.slice(0, 2);; let i = index">
                                 <img [src]="'../../../assets/images/' + data + '.jpg'" alt="Image Description">
                             </div>
                         </div>

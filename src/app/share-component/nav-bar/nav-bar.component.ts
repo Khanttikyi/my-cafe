@@ -8,32 +8,34 @@ import { Router } from '@angular/router';
 })
 
 export class NavBarComponent implements OnInit {
-  items:any
-  constructor(public router: Router) {}
+  items: any
+  constructor(public router: Router) { }
   ngOnInit() {
     this.items = [
       {
-          label: 'Product',
-          icon: 'pi pi-list',
-          route:'products'
-          // items: [
-          //     {
-          //         label: 'Installation',
-          //         route: '/installation'
-          //     },
-          //     {
-          //         label: 'Configuration',
-          //         route: '/configuration'
-          //     }
-          // ]
-          
+        label: 'Product',
+        icon: 'pi pi-list',
+        route: 'products'
+
+
       },
       {
-          label: 'About',
-          icon: 'pi pi-info-circle',
-          route:'about-us'
+        label: 'About',
+        icon: 'pi pi-info-circle',
+        route: 'about-us'
       },
-     
-  ];
+
+    ];
+  }
+  goToRoute(route: any) {
+    console.log("route", route);
+    if (route == 'coffee' || route == 'wine') {
+      this.router.navigate(['/products'], {
+        queryParams: {
+          productType: route,
+        },
+      })
+    }
+    this.router.navigate([route], {})
   }
 }

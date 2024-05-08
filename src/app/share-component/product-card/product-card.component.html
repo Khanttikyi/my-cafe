@@ -1,9 +1,7 @@
-<div class="card rounded-card m-1 p-2" style="min-height: 330px;">
-    <div class="mb-3 image-container2 m-left-7">
-        <img src="../../../assets/{{productType}}/{{ products.image }}" [alt]="products.name" class="border-radius"
-            style="width: 200px;height: 150px;" />
-    </div>
-    <div class="mb-3 font-weight-bold">{{ products.name }}</div>
+<div class="cyber-tile-mid fg-dark bg-orange">
+    <img src="../../../assets/{{productType}}/{{ products.image }}" [alt]="products.name"
+        class="cyber-tile img" />
+    <h4 class="font-weight-bold cyber-h fg-dark" style="margin: 0;">{{ products.name }}</h4>
     <div class="mb-3 font-weight">{{ products.description }}</div>
     <div class="d-flex justify-content-between align-items-center">
         <div class="mt-0 font-weight-bold text-md">{{ '$' + products.price }}</div>

@@ -1,22 +1,25 @@
-    <p-menubar [model]="items" >
-        <ng-template pTemplate="start" >
-            <div class="flex align-items-center gap-2 p-menuitem-link">
-                <img src="../../../assets/logo.png" [routerLink]="'/home'">
-            </div>
-        </ng-template>
-      
-        <ng-template pTemplate="item" let-item >
-            <ng-container>
-                <a pRipple [routerLink]="item.route" class="flex align-items-center p-menuitem-link">
-                    <span class="ml-2">{{ item.label }}</span>
-                </a>
-            </ng-container>
-        </ng-template>
-        <div>
-            <div class="flex align-items-center">
-                <span class="pi pi-cart-arrow-down" style="font-size: 1.5rem"></span>
-                
-            </div>
-        </div>
-    </p-menubar>
-    
+<nav class="cyber-razor-bottom bg-cyber-dark  fg-white mb-4">
+    <div class="wrapper">
+      <div class="logo"><a href="#">Logo</a></div>
+      <input type="radio" name="slider" id="menu-btn">
+      <input type="radio" name="slider" id="close-btn">
+      <ul class="nav-links">
+        <label for="close-btn" class="btn close-btn"><i class="fas fa-times"></i></label>
+        <li><a (click)="goToRoute('/home')">Home</a></li>
+        <li>
+          <a  (click)="goToRoute('/products')" class="desktop-item">Product</a>
+          <input type="checkbox" id="showDrop">
+          <label for="showDrop" class="mobile-item">Product</label>
+          <!-- <ul class="drop-menu">
+            <li><a (click)="goToRoute('/coffee')">Coffee</a></li>
+            <li><a (click)="goToRoute('/wine')">Wine</a></li>
+           
+          </ul> -->
+        </li>
+        <li><a (click)="goToRoute('/about-us')">About us</a></li>
+        <li><a ><i class="pi pi-shopping-cart"></i></a></li>
+      </ul>
+      <label for="menu-btn" class="btn menu-btn"><i class="pi pi-bars"></i></label>
+    </div>
+  </nav>
+  

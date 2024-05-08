@@ -101,6 +101,11 @@ export class HomePageComponent {
       },
     })
   }
+  viewAbout(){
+    this.router.navigate(['/about-us'], {
+      
+    })
+  }
 
 
 

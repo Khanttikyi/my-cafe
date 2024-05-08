@@ -1,0 +1,98 @@
+ [
+    {
+      "id": "1001",
+      "code": "mocha123",
+      "name": "Mocha",
+      "description": "Indulgent mocha with rich chocolate and espresso flavors",
+      "image": "mocha.jpg",
+      "price": 4.99,
+      "category": "Coffee",
+      "quantity": 50,
+      "inventoryStatus": "INSTOCK",
+      "rating": 4.7
+    },
+    {
+      "id": "1002",
+      "code": "latte456",
+      "name": "Latte",
+      "description": "Creamy latte made with freshly brewed espresso and steamed milk",
+      "image": "latte.jpg",
+      "price": 3.99,
+      "category": "Coffee",
+      "quantity": 45,
+      "inventoryStatus": "INSTOCK",
+      "rating": 4.5
+    },
+    {
+      "id": "1003",
+      "code": "cappuccino789",
+      "name": "Cappuccino",
+      "description": "Classic cappuccino topped with frothy milk foam",
+      "image": "cappuccino.jpg",
+      "price": 4.49,
+      "category": "Coffee",
+      "quantity": 40,
+      "inventoryStatus": "INSTOCK",
+      "rating": 4.6
+    },
+    {
+      "id": "1004",
+      "code": "espresso101",
+      "name": "Espresso",
+      "description": "Strong and bold espresso shot for a quick caffeine boost",
+      "image": "espresso.jpg",
+      "price": 2.49,
+      "category": "Coffee",
+      "quantity": 60,
+      "inventoryStatus": "INSTOCK",
+      "rating": 4.8
+    },
+    {
+      "id": "1005",
+      "code": "icedcoffee202",
+      "name": "Iced Coffee",
+      "description": "Refreshing iced coffee with ice cubes and milk",
+      "image": "iced-coffee.jpg",
+      "price": 3.79,
+      "category": "Coffee",
+      "quantity": 55,
+      "inventoryStatus": "INSTOCK",
+      "rating": 4.4
+    },
+    {
+      "id": "1005",
+      "code": "icedcoffee202",
+      "name": "Iced Coffee",
+      "description": "Refreshing iced coffee with ice cubes and milk",
+      "image": "iced-coffee.jpg",
+      "price": 3.79,
+      "category": "Coffee",
+      "quantity": 55,
+      "inventoryStatus": "INSTOCK",
+      "rating": 4.4
+    },
+    {
+      "id": "1005",
+      "code": "icedcoffee202",
+      "name": "Iced Coffee",
+      "description": "Refreshing iced coffee with ice cubes and milk",
+      "image": "iced-coffee.jpg",
+      "price": 3.79,
+      "category": "Coffee",
+      "quantity": 55,
+      "inventoryStatus": "INSTOCK",
+      "rating": 4.4
+    },
+    {
+      "id": "1005",
+      "code": "icedcoffee202",
+      "name": "Iced Coffee",
+      "description": "Refreshing iced coffee with ice cubes and milk",
+      "image": "iced-coffee.jpg",
+      "price": 3.79,
+      "category": "Coffee",
+      "quantity": 55,
+      "inventoryStatus": "INSTOCK",
+      "rating": 4.4
+    }
+  ]

@@ -1,0 +1,22 @@
+    <p-menubar [model]="items" >
+        <ng-template pTemplate="start" >
+            <div class="flex align-items-center gap-2 p-menuitem-link">
+                <img src="../../../assets/logo.png" [routerLink]="'/home'">
+            </div>
+        </ng-template>
+      
+        <ng-template pTemplate="item" let-item >
+            <ng-container>
+                <a pRipple [routerLink]="item.route" class="flex align-items-center p-menuitem-link">
+                    <span class="ml-2">{{ item.label }}</span>
+                </a>
+            </ng-container>
+        </ng-template>
+        <div>
+            <div class="flex align-items-center">
+                <span class="pi pi-cart-arrow-down" style="font-size: 1.5rem"></span>
+                
+            </div>
+        </div>
+    </p-menubar>
+    

@@ -1,0 +1,133 @@
+:host {
+    @keyframes slidedown-icon {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(20px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.slidedown-icon {
+    animation: slidedown-icon;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+.box {
+    background-image: radial-gradient(var(--primary-300), var(--primary-600));
+    border-radius: 50% !important;
+    color: var(--primary-color-text);
+}
+}
+.image-row {
+    display: flex;
+    justify-content: center;
+    margin-top: 5px; /* Small margin between the row and other elements */
+}
+
+.image-container {
+    margin-right: 10px; /* Adjust the margin between images */
+}
+
+.image-container:last-child {
+    margin-right: 0; /* Remove margin from the last image to prevent extra space */
+}
+
+
+.image-container {
+    width: 200px;
+    height: 250px;
+    border-radius: 5px 50px 5px 50px;
+    overflow: hidden;
+    border: 1px solid gray;
+    padding: 0px;
+}
+
+.image-container img {
+    width: 200px; /* Ensure the image fills the container */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Remove extra space below the image */
+}
+.image-container2 {
+    width: 270px;
+    height: 250px;
+    border-radius: 5px 50px 5px 50px;
+    overflow: hidden;
+    border: 1px solid gray;
+    padding: 0px;
+}
+
+.image-container img {
+    width: 270px; /* Ensure the image fills the container */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Remove extra space below the image */
+}
+
+.image-container-odd {
+    width: 200px;
+    height: 250px;
+    border-radius: 50px 5px 50px 5px;
+    overflow: hidden;
+    border: 1px solid gray;
+    padding: 0px;
+}
+
+.image-container-odd img {
+    width: 200px; /* Ensure the image fills the container */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Remove extra space below the image */
+}
+
+.card {
+    border: 1px solid rgba(0, 0, 0, 0.125); /* Use Bootstrap's border class */
+}
+
+.card img {
+    border-radius: 0.25rem; /* Use Bootstrap's border-radius class */
+    width: 100%;
+}
+
+.card .position-relative {
+    width: 100%;
+}
+
+.card .position-absolute {
+    top: 0;
+    left: 0;
+    margin: 10px; /* Adjust margin as needed */
+    background-color: rgba(0, 0, 0, 0.5); /* Use Bootstrap's background-color classes */
+    color: #fff; /* Use Bootstrap's text color classes */
+    padding: 5px; /* Adjust padding as needed */
+}
+
+.card .font-weight-bold {
+    font-weight: bold; /* Use Bootstrap's font-weight class */
+}
+
+.card .text-xl {
+    font-size: 1.25rem; /* Use Bootstrap's font-size class */
+}
+
+.card .btn {
+    margin-left: 10px; /* Adjust margin as needed */
+}
+
+.more-btn{
+    margin: 15px 10px;
+    padding: 15px 25px;
+}
+
+.open-close-container {
+    border: 1px solid #dddddd;
+    margin-top: 1em;
+    padding: 20px 20px 0px 20px;
+    color: #000000;
+    font-weight: bold;
+    font-size: 20px;
+  }

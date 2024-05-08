@@ -1,0 +1,62 @@
+[
+    {
+        "id": "2001",
+        "code": "merlot123",
+        "name": "Merlot",
+        "description": "Smooth and fruity red wine with notes of plum and cherry",
+        "image": "merlot.jpg",
+        "price": 14.99,
+        "category": "Wine",
+        "quantity": 30,
+        "inventoryStatus": "INSTOCK",
+        "rating": 4.7
+    },
+    {
+        "id": "2002",
+        "code": "chardonnay456",
+        "name": "Chardonnay",
+        "description": "Rich and buttery white wine with hints of oak and vanilla",
+        "image": "chardonnay.jpg",
+        "price": 12.99,
+        "category": "Wine",
+        "quantity": 25,
+        "inventoryStatus": "INSTOCK",
+        "rating": 4.5
+    },
+    {
+        "id": "2003",
+        "code": "cabernetsauvignon789",
+        "name": "Cabernet Sauvignon",
+        "description": "Full-bodied red wine with bold flavors of blackberry and tobacco",
+        "image": "cabernet-sauvignon.jpg",
+        "price": 16.49,
+        "category": "Wine",
+        "quantity": 20,
+        "inventoryStatus": "INSTOCK",
+        "rating": 4.6
+    },
+    {
+        "id": "2004",
+        "code": "pinotnoir101",
+        "name": "Pinot Noir",
+        "description": "Elegant and delicate red wine with notes of raspberry and spice",
+        "image": "pinot-noir.jpg",
+        "price": 18.49,
+        "category": "Wine",
+        "quantity": 35,
+        "inventoryStatus": "INSTOCK",
+        "rating": 4.8
+    },
+    {
+        "id": "2005",
+        "code": "sauvignonblanc202",
+        "name": "Sauvignon Blanc",
+        "description": "Crisp and refreshing white wine with aromas of citrus and herbs",
+        "image": "sauvignon-blanc.jpg",
+        "price": 13.79,
+        "category": "Wine",
+        "quantity": 40,
+        "inventoryStatus": "INSTOCK",
+        "rating": 4.4
+    }
+]

@@ -1,0 +1,15 @@
+<div class="card rounded-card m-1 p-2" style="min-height: 330px;">
+    <div class="mb-3 image-container2 m-left-7">
+        <img src="../../../assets/{{productType}}/{{ products.image }}" [alt]="products.name" class="border-radius"
+            style="width: 200px;height: 150px;" />
+    </div>
+    <div class="mb-3 font-weight-bold">{{ products.name }}</div>
+    <div class="mb-3 font-weight">{{ products.description }}</div>
+    <div class="d-flex justify-content-between align-items-center">
+        <div class="mt-0 font-weight-bold text-md">{{ '$' + products.price }}</div>
+        <div>
+            <button type="button" class="btn btn-coffee ml-2"><i
+                    class="pi pi-shopping-cart"></i></button>
+        </div>
+    </div>
+</div>

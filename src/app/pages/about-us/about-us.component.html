@@ -1,0 +1,66 @@
+<div class="grid">
+    <div class="row justify-center mt-5">
+        <div class="col-6 text-center">
+            <h5 class="font-bold">About Us</h5>
+            <h3 class="mt-2
+        font-natual-black" style="line-height: 25px;">
+                Why we are the best
+            </h3>
+        </div>
+        <div class="mt-5">
+            <p-splitter [panelSizes]="[65, 35]" [gutterSize]="0" [style]="{ height: '400px' }" styleClass="mb-5">
+                <ng-template pTemplate>
+                    <div class="row">
+                        <div class="col flex align-items-center justify-content-center">
+                            <p style="margin: 0px 30px;">
+                                "Welcome to Blue Corner Cafe, your cozy corner of comfort in the heart of the city.
+                                Nestled
+                                in a quaint corner, we pride ourselves on serving up more than just coffee; we offer
+                                an
+                                experience, a moment of respite from the bustling streets outside.<br>
+                                At Blue Corner Cafe, we believe in the power of good coffee to bring people
+                                together.
+                                With
+                                every cup brewed to perfection, our skilled baristas craft each espresso, latte, and
+                                cappuccino with care, ensuring that every sip delights your senses and warms your
+                                soul.<br>
+                                But it's not just about the coffee; it's about the community. Our cafe is a place
+                                where
+                                friends gather, ideas flow, and laughter fills the air. Whether you're catching up
+                                with
+                                old
+                                friends, diving into a good book, or simply enjoying a moment of solitude, you'll
+                                always
+                                find a warm welcome at Blue Corner Cafe.<br>
+                                Beyond our delicious brews, we also offer a selection of delectable pastries and
+                                light
+                                bites
+                                to complement your coffee experience. From freshly baked croissants to indulgent
+                                cakes,
+                                there's something to satisfy every craving.<br>
+                                So why not stop by and join us for a cup of coffee? Whether you're a seasoned coffee
+                                enthusiast or a casual caffeine lover, we can't wait to welcome you to the <b>Blue
+                                    Corner
+                                    family.</b>"<br><button
+                                    class="bg-coffee-brown border-btm-right border-coffee more-btn">Read
+                                    More</button>
+                            </p>
+                        </div>
+                    </div>
+
+                </ng-template>
+                <ng-template pTemplate>
+                    <div class="col flex align-items-center justify-content-center">
+
+                        <div class="image-row">
+                            <div class="image-container" *ngFor="let data of image.slice(0, 2); let i = index"
+                                [ngClass]="{'image-container-odd': i % 2 !== 0}">
+                                <img [src]="'../../../assets/images/' + data + '.jpg'" alt="Image Description">
+                            </div>
+                        </div>
+                    </div>
+                </ng-template>
+            </p-splitter>
+        </div>
+    </div>
+</div>

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -8,6 +8,18 @@ import { Router } from '@angular/router';
 })
 
 export class NavBarComponent implements OnInit {
+  isHeaderFixed: boolean = false;
+  isSide: boolean = false
+  @HostListener("window:scroll", [])
+  onWindowScroll() {
+    //.scrollTop
+    if (document.documentElement.scrollTop > 0) {
+      this.isHeaderFixed = true;
+    } else {
+      this.isHeaderFixed = false;
+    }
+  }
+ 
   items: any
   constructor(public router: Router) { }
   ngOnInit() {
@@ -27,7 +39,16 @@ export class NavBarComponent implements OnInit {
 
     ];
   }
+  toggleMenu() {
+    this.isSide = true
+    var sideMenu = document.querySelector('.side-menu') as HTMLElement;
+    if (sideMenu) {
+      sideMenu.style.left = (sideMenu.style.left === '0px') ? '-250px' : '0px';
+    }
+  }
+
   goToRoute(route: any) {
+    this.isSide=false
     console.log("route", route);
     if (route == 'coffee' || route == 'wine') {
       this.router.navigate(['/products'], {

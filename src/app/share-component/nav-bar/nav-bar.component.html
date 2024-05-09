@@ -1,4 +1,4 @@
-<nav class="cyber-razor-bottom bg-cyber-dark  fg-white mb-4">
+<!-- <nav class="cyber-razor-bottom bg-cyber-dark  fg-white mb-4">
     <div class="wrapper">
       <div class="logo"><a href="#">Logo</a></div>
       <input type="radio" name="slider" id="menu-btn">
@@ -10,11 +10,7 @@
           <a  (click)="goToRoute('/products')" class="desktop-item">Product</a>
           <input type="checkbox" id="showDrop">
           <label for="showDrop" class="mobile-item">Product</label>
-          <!-- <ul class="drop-menu">
-            <li><a (click)="goToRoute('/coffee')">Coffee</a></li>
-            <li><a (click)="goToRoute('/wine')">Wine</a></li>
-           
-          </ul> -->
+         
         </li>
         <li><a (click)="goToRoute('/about-us')">About us</a></li>
         <li><a ><i class="pi pi-shopping-cart"></i></a></li>
@@ -22,4 +18,40 @@
       <label for="menu-btn" class="btn menu-btn"><i class="pi pi-bars"></i></label>
     </div>
   </nav>
-  
+   -->
+<div class="header-top" [class.header-top--fixed]="isHeaderFixed">
+  <i class="pi pi-bars menu-toggle" (click)="toggleMenu()" style="font-size: 2rem;"></i>
+  <label (click)="goToRoute('/home')" class="header-top__logo cyberpunk-font" style="font-size: 1.5rem; color:#fff !important">BlUE CORNER</label>
+  <div class="menu">
+    <ul class="menu-list">
+      <li class="menu-item" (click)="goToRoute('/home')">
+        <span>Home</span>
+      </li>
+      <li class="menu-item" (click)="goToRoute('/products')">
+        <span>Product</span>
+      </li>
+      <li class="menu-item" (click)="goToRoute('/about-us')">
+        <span>About Us</span>
+      </li>
+      <li class="menu-item menu-item-buy">
+        <a href="coffee">Cart<i class="pi pi-shopping-cart" style="margin-left: 15px;"></i></a>
+      </li>
+    </ul>
+  </div>
+  <div class="side-menu" *ngIf="isSide">
+    <ul class="side-menu-list">
+      <li class="side-menu-item" (click)="goToRoute('/home')">
+        <span>Home</span>
+      </li>
+      <li class="side-menu-item" (click)="goToRoute('/products')">
+        <span>Product</span>
+      </li>
+      <li class="side-menu-item" (click)="goToRoute('/about-us')">
+        <span>About Us</span>
+      </li>
+      <li class="side-menu-item">
+        <span>Cart<i class="pi pi-shopping-cart" style="margin-left: 15px;"></i></span>
+      </li>
+    </ul>
+  </div>
+</div>

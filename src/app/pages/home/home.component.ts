@@ -35,10 +35,17 @@ export class HomePageComponent {
   stateOptions: any[] = [{ label: 'COFFEE', value: 'coffee' }, { label: 'WINE', value: 'wine' }];
 
   value: string = 'coffee';
+  isHeaderFixed: boolean = false;
 
+  
   @HostListener("window:scroll", [])
   onWindowScroll() {
     //.scrollTop
+    if (document.documentElement.scrollTop > 0) {
+      this.isHeaderFixed = true;
+    } else {
+      this.isHeaderFixed = false;
+    }
     if (document.documentElement.scrollTop == 0) {
       this.firstGrid = true
       this.secondGrid = false

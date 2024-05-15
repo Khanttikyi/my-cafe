@@ -12,7 +12,7 @@ body {
     // background-repeat: no-repeat;
     // background-size: cover;
     // backdrop-filter: blur(3px);
-    background: linear-gradient( 45deg, #db4dd0, #3954d7);
+    // background: linear-gradient( 45deg, #db4dd0, #3954d7);
 
 }
 .blur-card{
@@ -35,12 +35,12 @@ body {
 
 .main{
     background-repeat: no-repeat;
-   background-image: url('./assets/cyberpunk-bg1.jpg');
+//    background-image: url('./assets/cyberpunk-bg1.jpg');
 
-   background-position: center;
-   background-repeat: no-repeat;
-   background-size: cover;
-   backdrop-filter: blur(3px);
+//    background-position: center;
+//    background-repeat: no-repeat;
+//    background-size: cover;
+//    backdrop-filter: blur(3px);
 }
 
 body,
@@ -66,7 +66,9 @@ label {
 }
 
 .header-top {
-    background: linear-gradient( 45deg, #db4dd0, #3954d7);
+    // background: linear-gradient( 45deg, #db4dd0, #3954d7);
+    // background: linear-gradient(180deg, rgba(0, 0, 0, .65), transparent);
+    background: #000;
     align-items: self-start;
     display: flex;
     justify-content: space-between;
@@ -90,7 +92,7 @@ label {
     position: relative;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 730px) {
     .header-top:before {
         background: linear-gradient(180deg, rgba(0, 0, 0, .65), transparent);
         content: "";
@@ -143,21 +145,21 @@ label {
    
 }
 
-@media (min-width: 1200px) and (max-width: 1440px) {
+@media (min-width: 730px) and (max-width: 1440px) {
     .menu-list:before {
         border-right: 15px solid transparent;
         border-top: 15px solid #ff8c12;
     }
 }
 
-@media (min-width: 1200px) and (max-width: 1440px) {
+@media (min-width: 730px) and (max-width: 1440px) {
     .menu-item {
         font-size: 18.3333333333px;
         padding: 0 20.8333333333px;
     }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 730px) {
     .menu-item {
         align-items: center;
         color: #fff;
@@ -175,14 +177,14 @@ label {
     }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 730px) {
     .menu-sub {
         align-items: center;
         position: relative;
     }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 730px) {
 
     .menu-item:hover .menu-sub-list,
     .menu-sub {
@@ -191,7 +193,7 @@ label {
     }
 }
 
-@media (min-width: 1200px) and (max-width: 1440px) {
+@media (min-width: 730px) and (max-width: 1440px) {
     .menu-sub-list {
         border: 1px solid #ff8c12;
         border-top: 6.6666666667px solid #ff8c12;
@@ -202,13 +204,13 @@ label {
     }
 }
 
-@media (min-width: 1200px) and (max-width: 1440px) {
+@media (min-width: 730px) and (max-width: 1440px) {
     .menu-item.menu-item-buy {
         min-width: 140px;
     }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 730px) {
     .menu-item.menu-item-buy {
         background: #ff8c12;
         color: #000;
@@ -219,14 +221,14 @@ label {
     }
 }
 
-@media (min-width: 1200px) and (max-width: 1440px) {
+@media (min-width: 730px) and (max-width: 1440px) {
     .menu-list:before {
         border-right: 15px solid transparent;
         border-top: 15px solid #ff8c12;
     }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 730px) {
     .menu-sub:after {
         border-left: 4px solid transparent;
         border-right: 4px solid transparent;
@@ -240,13 +242,13 @@ label {
     }
 }
 
-@media (min-width: 1200px) and (max-width: 1440px) {
+@media (min-width: 730px) and (max-width: 1440px) {
     .menu-sub:after {
         margin-left: 3.3333333333px;
     }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 730px) {
     .menu-sub-list {
         -webkit-backdrop-filter: blur(8px);
         backdrop-filter: blur(8px);
@@ -269,20 +271,20 @@ label {
     }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 730px) {
     .menu-sub-list li:hover {
         color: #ff8c12;
     }
 }
 
-@media (min-width: 1200px) and (max-width: 1440px) {
+@media (min-width: 730px) and (max-width: 1440px) {
     .menu-sub-list li {
         height: 36.6666666667px;
         padding-right: 20px;
     }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 730px) {
     .menu-sub-list li {
         align-items: center;
         background: transparent;
@@ -293,19 +295,19 @@ label {
     }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 730px) {
     .menu-item:hover .menu-sub-list {
         display: block;
     }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 730px) {
     .header-top--fixed:before {
         opacity: 1;
     }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 730px) {
     .header-top--fixed:before {
         opacity: 1;
     }
@@ -690,10 +692,51 @@ body {
     --bg: var(--red);
     background-color: var(--red);
 }
+.image-container {
+    width: auto; /* Set width to auto to match image size */
+    height: auto; /* Set height to auto to match image size */
+    max-width: 200px; /* Set maximum width to control size */
+    max-height: 250px; /* Set maximum height to control size */
+    overflow: hidden;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Media queries for responsive adjustments */
+@media (max-width: 1400px) {
+    .image-container {
+        width: 200px; /* Width for tablets */
+        height: 250px; /* Height for tablets */
+    }
+}
+
+@media (max-width: 1220px) {
+    .image-container {
+        width: 120px; /* Width for smaller tablets */
+        height:150px; /* Height for smaller tablets */
+    }
+}
+
+@media (max-width: 1100px) {
+    .image-container {
+        width: 100px; /* Width for phones */
+        height: 130px; /* Height for phones */
+    }
+}
+
+.image-container img {
+    width: 100%; /* Ensures the image fills its container */
+    height: 100%; /* Ensures the image fills its container */
+    object-fit: cover; /* Maintains aspect ratio while covering the container */
+}
 
 .bg-orange {
     --bg: var(--orange);
-    background: linear-gradient( 45deg, #db4dd0, #3954d7);
+    // background: linear-gradient( 45deg, #db4dd0, #3954d7);
     // background-color: var(--orange);
 }
 

@@ -82,20 +82,15 @@ export class HomePageComponent {
 
     this.responsiveOptions = [
       {
-        breakpoint: '1400px',
-        numVisible: 3,
-        numScroll: 3
-      },
-      {
-        breakpoint: '1220px',
+        breakpoint: '992px', // Breakpoint for tablets
         numVisible: 2,
         numScroll: 2
-      },
-      {
-        breakpoint: '1100px',
+    },
+    {
+        breakpoint: '768px', // Breakpoint for phones
         numVisible: 1,
         numScroll: 1
-      }
+    }
     ];
   }
   ngAfterViewInit() {

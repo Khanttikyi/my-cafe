@@ -1,160 +1,143 @@
-    <div class="main">
-        <div class="grid">
-            <div class="row justify-center mt-5">
-                <div class="col-6">
-                    <h1 class="cyber-h font-weight-bold text-center ">Enjoy Your Favourite Coffee With <span
-                            class="cyber-glitch-2">Blue Corner Cafe</span></h1>
-                    <h6 class="mt-2 text-center cyber-glitch-1
+<div class="main">
+    <div class="grid">
+        <div class="row justify-center mt-5">
+            <div class="col-12">
+                <h1 class="cyber-h font-weight-bold text-center ">Enjoy Your Favourite Coffee With <span
+                        class="cyber-glitch-2">Blue Corner Cafe</span></h1>
+                <h6 class="mt-2 text-center cyber-glitch-1
             font-natual-black" style="line-height: 25px; ">
-                        Discover tranquility at Blue Corner a sanctuary for unwinding,
-                        where your evenings are perfected with relaxation and rich flavors.
-                    </h6>
-                    <div class="text-center">
-                        <button class="cyber-button-small bg-orange fg-white " (click)="viewProduct()">
-                            EXPORE OUR PRODUCTS
-                            <span class="glitchtext">EXPORE</span>
-                            <span class="tag">R25</span>
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="grid" [@fade]="firstGrid ? 'visible' : 'hidden'">
-            <div class="image-row mt-5">
-                <div class="cyber-tile-small fg-dark bg-orange  mt-4 inline-block vt-bot" style="margin: 15px;"
-                    *ngFor="let data of image; let i = index">
-                    <img [src]="'../../../assets/images/' + data + '.jpg'" alt="Image Description"
-                        class="cyber-glitch-1">
-                </div>
-
-            </div>
-
-        </div>
-
-        <div class="grid" [@fade]="secondGrid ? 'visible' : 'hidden'">
-
-            <div class="row  mt-5">
-                <div class="col-12 ">
-
-                    <h1 class="cyber-h font-weight-bold">Our Signature</h1>
-                </div>
-            </div>
-            <div class="row justify-center mt-5">
-                <div class="col-6 text-center">
-                    <p-selectButton [options]="stateOptions" [(ngModel)]="value" optionLabel="label"
-                        optionValue="value" />
-                </div>
-            </div>
-
-            <div class="mt-5" *ngIf="this.value=='coffee'">
-                <p-carousel [value]="products" [numVisible]="4" [numScroll]="1" [responsiveOptions]="responsiveOptions">
-                    <ng-template let-product pTemplate="item">
-
-                        <div class="cyber-tile-mid fg-dark bg-orange ">
-                            <div class="mb-3">
-                                <img src="../../../assets/coffee/{{ product.image }}" [alt]="product.name"
-                                    class="cyber-tile img cyber-glitch-2" />
-                            </div>
-                            <h4 class="font-weight-bold cyber-h fg-dark" style="margin: 0;">{{ product.name }}</h4>
-                            <div class="mb-3 font-weight">{{ product.description }}</div>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <div class="mt-0 font-weight-bold text-md">{{ '$' + product.price }}</div>
-                                <div>
-                                    <button type="button" class="btn btn-coffee ml-2"><i
-                                            class="pi pi-shopping-cart"></i></button>
-                                </div>
-                            </div>
-                        </div>
-                    </ng-template>
-                </p-carousel>
-            </div>
-            <div class="mt-5" *ngIf="this.value=='wine'">
-                <p-carousel [value]="wines" [numVisible]="4" [numScroll]="1" [responsiveOptions]="responsiveOptions">
-                    <ng-template let-product pTemplate="item">
-                        <div class="cyber-tile-mid fg-dark bg-orange ">
-                            <img src="../../../assets/wine/{{ product.image }}" [alt]="product.name"
-                                class="cyber-tile img cyber-glitch-2" />
-                            <h4 class="font-weight-bold cyber-h fg-dark" style="margin: 0;">{{ product.name }}</h4>
-                            <div class="mb-3 font-weight">{{ product.description }}</div>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <div class="mt-0 font-weight-bold text-md">{{ '$' + product.price }}</div>
-                                <div>
-                                    <button type="button" class="btn btn-coffee ml-2"><i
-                                            class="pi pi-shopping-cart"></i></button>
-                                </div>
-                            </div>
-                        </div>
-
-                    </ng-template>
-                </p-carousel>
-            </div>
-            <div class="row justify-center mt-5">
-                <div class="col-6 text-center">
-                    <button class="cyber-button-small bg-orange fg-white" (click)="viewProduct()">
-                        VIEW ALL
-                        <span class="glitchtext">VIEW</span>
+                    Discover tranquility at Blue Corner a sanctuary for unwinding,
+                    where your evenings are perfected with relaxation and rich flavors.
+                </h6>
+                <div class="text-center">
+                    <button class="cyber-button-small bg-orange fg-white " (click)="viewProduct()">
+                        EXPORE OUR PRODUCTS
+                        <span class="glitchtext">EXPORE</span>
                         <span class="tag">R25</span>
                     </button>
                 </div>
             </div>
         </div>
-        
+    </div>
 
-        <div class="grid" [@fade]="thirdGrid ? 'visible' : 'hidden'">
-            <div class="row mt-5">
-                <div class="col-6">
-                    <h2 class="font-bold cyber-h cyber-glitch-2">About Us</h2>
-                    <h3 class="mt-2
+    <div class="grid" [@fade]="firstGrid ? 'visible' : 'hidden'">
+        <div class="image-row mt-5">
+            <div class="fg-dark bg-orange  mt-4 inline-block vt-bot image-container" style="margin: 15px;"
+                *ngFor="let data of image; let i = index">
+                <img [src]="'../../../assets/images/' + data + '.jpg'" alt="Image Description"
+                    class="cyber-glitch-1 img-fluid cover-img">
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="grid" [@fade]="secondGrid ? 'visible' : 'hidden'">
+
+        <div class="row  mt-5">
+            <div class="col-12 ">
+
+                <h1 class="cyber-h font-weight-bold">Our Signature</h1>
+            </div>
+        </div>
+        <div class="row justify-center mt-5">
+            <div class="col-12 text-center">
+                <p-selectButton [options]="stateOptions" [(ngModel)]="value" optionLabel="label" optionValue="value" />
+            </div>
+        </div>
+
+        <div class="mt-5" *ngIf="this.value=='coffee'">
+            <p-carousel [value]="products" [numVisible]="4" [numScroll]="1" [responsiveOptions]="responsiveOptions">
+                <ng-template let-product pTemplate="item">
+
+                    <div class="cyber-tile-mid fg-dark bg-orange ">
+                        <div class="mb-3">
+                            <img src="../../../assets/coffee/{{ product.image }}" [alt]="product.name"
+                                class="cyber-tile img cyber-glitch-2" />
+                        </div>
+                        <h4 class="font-weight-bold cyber-h fg-dark" style="margin: 0;">{{ product.name }}</h4>
+                        <div class="mb-3 font-weight">{{ product.description }}</div>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="mt-0 font-weight-bold text-md">{{ '$' + product.price }}</div>
+                            <div>
+                                <button type="button" class="btn btn-coffee ml-2"><i
+                                        class="pi pi-shopping-cart"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </ng-template>
+            </p-carousel>
+        </div>
+        <div class="mt-5" *ngIf="this.value=='wine'">
+            <p-carousel [value]="wines" [numVisible]="4" [numScroll]="1" [responsiveOptions]="responsiveOptions">
+                <ng-template let-product pTemplate="item">
+                    <div class="cyber-tile-mid fg-dark bg-orange ">
+                        <img src="../../../assets/wine/{{ product.image }}" [alt]="product.name"
+                            class="cyber-tile img cyber-glitch-2" />
+                        <h4 class="font-weight-bold cyber-h fg-dark" style="margin: 0;">{{ product.name }}</h4>
+                        <div class="mb-3 font-weight">{{ product.description }}</div>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="mt-0 font-weight-bold text-md">{{ '$' + product.price }}</div>
+                            <div>
+                                <button type="button" class="btn btn-coffee ml-2"><i
+                                        class="pi pi-shopping-cart"></i></button>
+                            </div>
+                        </div>
+                    </div>
+
+                </ng-template>
+            </p-carousel>
+        </div>
+        <div class="row justify-center mt-5">
+            <div class="col-6 text-center">
+                <button class="cyber-button-small bg-orange fg-white" (click)="viewProduct()">
+                    VIEW ALL
+                    <span class="glitchtext">VIEW</span>
+                    <span class="tag">R25</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="grid" [@fade]="thirdGrid ? 'visible' : 'hidden'">
+        <div class="row mt-5">
+            <div class="col-6">
+                <h2 class="font-bold cyber-h cyber-glitch-2">About Us</h2>
+                <h3 class="mt-2
             font-natual-black cyber-glitch-1" style="line-height: 25px;">
-                        Why we are the best
-                    </h3>
-                </div>
-                <div class="mt-5">
-                    <p-splitter [panelSizes]="[65, 35]" [gutterSize]="0"
-                        [style]="{ height: '400px',background:'transparent' }" styleClass="mb-5">
-                        <ng-template pTemplate>
+                    Why we are the best
+                </h3>
+            </div>
+            <div class="mt-5">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-7">
                             <div class="row">
                                 <div class="col flex align-items-center justify-content-center blur-card">
                                     <p style="margin: 0px 30px;">
                                         "Welcome to Blue Corner Cafe, your cozy corner of comfort in the heart of the
                                         city.
-                                        Nestled
-                                        in a quaint corner, we pride ourselves on serving up more than just coffee; we
-                                        offer
-                                        an
+                                        Nestled in a quaint corner, we pride ourselves on serving up more than just
+                                        coffee; we offer an
                                         experience, a moment of respite from the bustling streets outside.<br>
                                         At Blue Corner Cafe, we believe in the power of good coffee to bring people
                                         together.
-                                        With
-                                        every cup brewed to perfection, our skilled baristas craft each espresso, latte,
-                                        and
-                                        cappuccino with care, ensuring that every sip delights your senses and warms
-                                        your
-                                        soul.<br>
+                                        With every cup brewed to perfection, our skilled baristas craft each espresso,
+                                        latte, and cappuccino with care,
+                                        ensuring that every sip delights your senses and warms your soul.<br>
                                         But it's not just about the coffee; it's about the community. Our cafe is a
-                                        place
-                                        where
-                                        friends gather, ideas flow, and laughter fills the air. Whether you're catching
-                                        up
-                                        with
-                                        old
-                                        friends, diving into a good book, or simply enjoying a moment of solitude,
-                                        you'll
-                                        always
-                                        find a warm welcome at Blue Corner Cafe.<br>
+                                        place where friends gather, ideas flow,
+                                        and laughter fills the air. Whether you're catching up with old friends, diving
+                                        into a good book, or simply enjoying a
+                                        moment of solitude, you'll always find a warm welcome at Blue Corner Cafe.<br>
                                         Beyond our delicious brews, we also offer a selection of delectable pastries and
-                                        light
-                                        bites
-                                        to complement your coffee experience. From freshly baked croissants to indulgent
-                                        cakes,
-                                        there's something to satisfy every craving.<br>
+                                        light bites to complement your coffee experience.
+                                        From freshly baked croissants to indulgent cakes, there's something to satisfy
+                                        every craving.<br>
                                         So why not stop by and join us for a cup of coffee? Whether you're a seasoned
-                                        coffee
-                                        enthusiast or a casual caffeine lover, we can't wait to welcome you to the
-                                        <b>Blue
-                                            Corner
-                                            family.</b>"<br>
+                                        coffee enthusiast or a casual caffeine lover,
+                                        we can't wait to welcome you to the <b>Blue Corner family.</b>"<br>
                                         <button class="cyber-button-small bg-orange fg-white" (click)="viewAbout()">
                                             READ MORE
                                             <span class="glitchtext">READ MORE</span>
@@ -163,22 +146,31 @@
                                     </p>
                                 </div>
                             </div>
-
-                        </ng-template>
-                        <ng-template pTemplate>
-                            <div class="col flex align-items-center justify-content-center">
-
+                        </div>
+                        <div class="col-md-5" style="display: flex;justify-content: center;align-items: center;">
+                            <div class="row">
                                 <div class="image-row">
-
-                                    <div class="cyber-tile-small fg-dark bg-orange  mt-4 inline-block vt-bot"
-                                        style="margin: 5px;" *ngFor="let data of image.slice(0, 2);; let i = index">
-                                        <img [src]="'../../../assets/images/' + data + '.jpg'" alt="Image Description">
+                                    <div class="col-md-6 mt-4" *ngFor="let data of image.slice(0, 2);; let i = index">
+                                        <!-- <div class="fg-dark bg-orange inline-block vt-bot"
+                                            style="margin: 5px;">
+                                            <img [src]="'../../../assets/images/' + data + '.jpg'"
+                                                alt="Image Description" class="img-fluid">
+                                        </div> -->
+                                        <div class="fg-dark bg-orange inline-block vt-bot image-container" style="margin: 5px;">
+                                            <img [src]="'../../../assets/images/' +(i==0?'cover5':'cover6') + '.jpg'"
+                                                alt="Image Description" class="img-fluid">
+                                        </div>
                                     </div>
+
                                 </div>
                             </div>
-                        </ng-template>
-                    </p-splitter>
+                        </div>
+                    </div>
                 </div>
+
             </div>
         </div>
+
+
     </div>
+</div>

@@ -3,6 +3,67 @@
 @import "primeicons/primeicons.css";
 @import "../node_modules/bootstrap/dist/css/bootstrap.css";
 
+:root {
+    --root-font-size: 18px;
+
+    --yellow: #f8ef02;
+    --cyan: #00ffd2;
+    --red: #ff003c;
+    --orange: #ff8c12;
+    --blue: #136377;
+    --green: #446d44;
+    --purple: purple;
+    --black: #000;
+    --white: #fff;
+    --dark: #000000;
+
+    --fg: var(--black);
+    --bg: transparent;
+    --ac: var(--black);
+
+    --yellow-cyberpunk-font: #feef00;
+    --cyan-cyberpunk-font1: #46dffb;
+    --cyan-cyberpunk-font2: #45aefb;
+
+    --banner-color1: var(--purple);
+    --banner-color2: var(--red);
+    --banner-color3: var(--yellow);
+    --banner-color4: var(--cyan);
+    --banner-gradient-stop: 405px;
+
+    --input-padding-top: 0px;
+    --input-padding-bot: 0.2rem;
+    --input-padding-left: 1rem;
+    --input-padding-right: 2rem;
+    --input-font-size: 1.2rem;
+    --input-width: 240px;
+
+    --checkbox-size: 28px;
+    --checkbox-inner-size: 16px;
+
+    --radio-size: 28px;
+    --radio-inner-size: 16px;
+}
+
+html {
+    font-size: var(--root-font-size);
+    font-family: "BlenderProBook";
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    // background-color: var(--yellow);
+    padding: 0;
+    margin: 0;
+}
+
+.font-weight-bold {
+    font-weight: bold;
+}
+
+/*#endregion*/
+
 body {
     // margin: 2px;
     // background-repeat: no-repeat;
@@ -14,6 +75,16 @@ body {
     // backdrop-filter: blur(3px);
     // background: linear-gradient( 45deg, #db4dd0, #3954d7);
 
+}
+
+.main{
+    background-repeat: no-repeat;
+//    background-image: url('./assets/cyberpunk-bg1.jpg');
+
+//    background-position: center;
+//    background-repeat: no-repeat;
+//    background-size: cover;
+//    backdrop-filter: blur(3px);
 }
 .blur-card{
     
@@ -28,21 +99,32 @@ body {
     
 }
 
+/*#region fonts*/
+@font-face {
+    font-family: BlenderProBook;
+    font-style: normal;
+    font-weight: 400;
+    src: url(assets/cyber-fonts/BlenderProBook.woff2) format("woff2");
+}
+
+@font-face {
+    font-family: Oxanium;
+    font-style: normal;
+    font-weight: 400;
+    src: url(assets/cyber-fonts/Oxanium.woff2) format('woff2');
+}
+
+@font-face {
+    font-family: Cyberpunk;
+    src: url(assets/cyber-fonts/Cyberpunk.otf) format('opentype');
+}
+
 @font-face {
     font-family: "BlenderProBook";
     src: url("./assets/cyber-fonts/BlenderProBook.woff2") format("opentype");
 }
 
-.main{
-    background-repeat: no-repeat;
-//    background-image: url('./assets/cyberpunk-bg1.jpg');
-
-//    background-position: center;
-//    background-repeat: no-repeat;
-//    background-size: cover;
-//    backdrop-filter: blur(3px);
-}
-
+/*#endregion*/
 body,
 h1,
 h2,
@@ -56,15 +138,13 @@ label {
     color: #ff8c12 !important;
 }
 
-//NAV
-
+//start-nav-bar
 .header-top__logo {
     display: block;
     margin-top: 5px;
     position: relative;
     width: 320px;
 }
-
 .header-top {
     // background: linear-gradient( 45deg, #db4dd0, #3954d7);
     // background: linear-gradient(180deg, rgba(0, 0, 0, .65), transparent);
@@ -379,7 +459,29 @@ label {
     }
 }
 
-//NAV
+//end-nav-bar
+
+
+//start-font
+.font-size-20 {
+    font-size: 20px;
+}
+
+.font-size-13 {
+    font-size: 13px;
+}
+
+.font-natual-black {
+    color: #ff8c12
+}
+
+.font-coffee-brown {
+    color: #ff8c12;
+}
+
+//end-font
+
+//start-layout
 ol,
 ul,
 dl {
@@ -401,20 +503,23 @@ a {
     margin-top: 20px;
 }
 
-.font-size-20 {
-    font-size: 20px;
+.lh-25 {
+    line-height: 25px;
+
 }
 
-.font-size-13 {
-    font-size: 13px;
+
+.m-left-7 {
+    margin-left: 7%;
 }
 
-.font-natual-black {
-    color: #ff8c12
-}
+//end-layout
 
-.font-coffee-brown {
-    color: #ff8c12;
+
+
+.rounded-card {
+    border: 1px solid #ff8c12;
+    border-radius: 15px 15px 15px 15px;
 }
 
 .btn-coffee {
@@ -439,28 +544,11 @@ button {
     padding: 10px 15px;
 }
 
-.lh-25 {
-    line-height: 25px;
-
-}
-
-.rounded-card {
-    border: 1px solid #ff8c12;
-    border-radius: 15px 15px 15px 15px;
-}
-
-.m-left-7 {
-    margin-left: 7%;
-}
 
 .p-carousel .p-carousel-indicators .p-carousel-indicator.p-highlight button {
     background-color: #ff8c12;
 }
 
-// .p-selectbutton .p-button{
-//     padding: 10px 40px;
-
-// }
 .flex {
     display: flex;
 }
@@ -504,96 +592,9 @@ button {
     padding: 15px;
 }
 
-/* 
- * cyberpunk-css by alddesign: https://github.com/alddesign/cyberpunk-css 
- * v1.0.0-alpha.3
- * 
- * Free to use - do whatever the fck you want... 
- */
-
-/*#region fonts*/
-@font-face {
-    font-family: BlenderProBook;
-    font-style: normal;
-    font-weight: 400;
-    src: url(assets/cyber-fonts/BlenderProBook.woff2) format("woff2");
-}
-
-@font-face {
-    font-family: Oxanium;
-    font-style: normal;
-    font-weight: 400;
-    src: url(assets/cyber-fonts/Oxanium.woff2) format('woff2');
-}
-
-@font-face {
-    font-family: Cyberpunk;
-    src: url(assets/cyber-fonts/Cyberpunk.otf) format('opentype');
-}
-
-/*#endregion*/
 
 /*#region top level elements*/
-:root {
-    --root-font-size: 18px;
 
-    --yellow: #f8ef02;
-    --cyan: #00ffd2;
-    --red: #ff003c;
-    --orange: #ff8c12;
-    --blue: #136377;
-    --green: #446d44;
-    --purple: purple;
-    --black: #000;
-    --white: #fff;
-    --dark: #000000;
-
-    --fg: var(--black);
-    --bg: transparent;
-    --ac: var(--black);
-
-    --yellow-cyberpunk-font: #feef00;
-    --cyan-cyberpunk-font1: #46dffb;
-    --cyan-cyberpunk-font2: #45aefb;
-
-    --banner-color1: var(--purple);
-    --banner-color2: var(--red);
-    --banner-color3: var(--yellow);
-    --banner-color4: var(--cyan);
-    --banner-gradient-stop: 405px;
-
-    --input-padding-top: 0px;
-    --input-padding-bot: 0.2rem;
-    --input-padding-left: 1rem;
-    --input-padding-right: 2rem;
-    --input-font-size: 1.2rem;
-    --input-width: 240px;
-
-    --checkbox-size: 28px;
-    --checkbox-inner-size: 16px;
-
-    --radio-size: 28px;
-    --radio-inner-size: 16px;
-}
-
-html {
-    font-size: var(--root-font-size);
-    font-family: "BlenderProBook";
-    padding: 0;
-    margin: 0;
-}
-
-body {
-    // background-color: var(--yellow);
-    padding: 0;
-    margin: 0;
-}
-
-.font-weight-bold {
-    font-weight: bold;
-}
-
-/*#endregion*/
 
 /*#region cyberpunk font*/
 .oxanium-font {
@@ -833,7 +834,12 @@ body {
     --ac: var(--dark);
 }
 
-/*#endregion*/
+
+
+
+
+
+//Cyber-Punk Start
 
 /*#region razor*/
 .cyber-razor-top {
@@ -1914,78 +1920,6 @@ label {
         max-width: 100%;
     }
 }
-.neon-red {
-    --neon: #FF5161;
-    --neon-glow: #D30302;
-  }
-  
-  .neon-pink {
-    --neon: #FF53cd;
-    --neon-glow: #e10361;
-  }
-  
-  .neon-purple {
-    --neon: #9461fd;
-    --neon-glow: #4003e6;
-  }
-  
-  .neon-blue {
-    --neon: #2dd9fe;
-    --neon-glow: #00a3d5;
-  }
-  
-  .neon-green {
-    --neon: #00fe9b;
-    --neon-glow: #02c435;
-  }
-  
-  .neon-yellow {
-    --neon: #ffdb4e;
-    --neon-glow: #b48505;
-  }
-  .neon-orange {
-    --neon: #ff8c12;
-    --neon-glow: #ff8c12;
-  }
-  
-  .neon-white {
-    --neon: #fefefe;
-    --neon-glow: #ffffff;
-  }
-  
-  @supports (background: color(display-p3 1 1 1)) {
-    @media (dynamic-range: high) {
-      .neon-red {
-        --neon-glow: color(display-p3 1 0 0);
-      }
-  
-      .neon-pink {
-        --neon-glow: color(display-p3 1 0 1);
-      }
-  
-      .neon-purple {
-        --neon-glow: color(display-p3 0 0 1);
-      }
-  
-      .neon-blue {
-        --neon-glow: color(display-p3 0 1 1);
-      }
-  
-      .neon-green {
-        --neon-glow: color(display-p3 0 1 0);
-      }
-  
-      .neon-yellow {
-        --neon-glow: color(display-p3 1 1 0);
-      }
-      .neon-orange {
-        --neon-glow: color(display-p3 1 1 0);
-      }
-  
-      .neon-white {
-        --neon-glow: color(display-p3 1 1 1);
-      }
-    }
-  }
+
   
  
